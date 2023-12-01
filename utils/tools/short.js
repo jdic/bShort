@@ -1,4 +1,4 @@
-const Url = require('../models/Url')
+const Url = require('../../models/Url')
 
 const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 
