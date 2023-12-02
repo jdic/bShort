@@ -13,12 +13,12 @@ const fetch = async (url) =>
   const fetch = (await import('node-fetch')).default
   const html = await fetch(url)
   const $ = cheerio.load(await html.text())
-  const domain = (new URL(url)).origin
+  const { origin, host } = (new URL(url))
 
   const title = $(TITLE_SELECTOR).text()
-  const favicon = $(FAVICON_OP1_SELECTOR).attr('href') || $(FAVICON_OP2_SELECTOR).attr('href')
+  const favicon = `https://www.google.com/s2/favicons?sz=256&domain_url=${host}`
 
-  return { title, favicon, domain }
+  return { title, favicon, domain: origin }
 }
 
 module.exports = fetch
