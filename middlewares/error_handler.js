@@ -1,4 +1,4 @@
-const { INTERNAL_SERVER_ERROR } = require('../utils/constants')
+const { INTERNAL_SERVER_ERROR } = require('../utils/status')
 
 /**
  * It is useless, it only sends the http 500 code.

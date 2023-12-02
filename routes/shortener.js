@@ -1,5 +1,5 @@
 const { fetch, filter, short } = require('../utils/utils')
-const { NOT_FOUND, OK } = require('../utils/constants')
+const { NOT_FOUND, OK } = require('../utils/status')
 const router = require('express').Router()
 const Url = require('../models/Url')
 

@@ -1,3 +1,4 @@
+const { TITLE_SELECTOR, FAVICON_OP1_SELECTOR, FAVICON_OP2_SELECTOR } = require('../selectors')
 const cheerio = require('cheerio')
 
 /**
@@ -14,8 +15,8 @@ const fetch = async (url) =>
   const $ = cheerio.load(await html.text())
   const domain = (new URL(url)).origin
 
-  const title = $('head > title').text()
-  const favicon = $('head > link[rel="icon"]').attr('href') || $('head > link[rel="shortcut icon"]').attr('href')
+  const title = $(TITLE_SELECTOR).text()
+  const favicon = $(FAVICON_OP1_SELECTOR).attr('href') || $(FAVICON_OP2_SELECTOR).attr('href')
 
   return { title, favicon, domain }
 }
