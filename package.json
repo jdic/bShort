@@ -10,11 +10,8 @@
     "colors": "^1.4.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "htmlparser2": "^9.0.0",
     "mongoose": "^8.0.2",
-    "node-fetch": "^3.3.2",
-    "parse5": "^7.1.2",
-    "parse5-sax-parser": "^7.0.0"
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
